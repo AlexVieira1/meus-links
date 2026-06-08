@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Mercado Livre | Alex Vieira</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        }
+
+        /* Esconde a barra de rolagem no carrossel de arrastar */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen text-slate-200 flex flex-col items-center p-4 antialiased pb-20">
+
+    <!-- Container Principal -->
+    <main class="w-full max-w-md flex flex-col mt-4 relative">
+
+        <!-- Botão Voltar -->
+        <a href="index.html"
+            class="inline-flex items-center text-slate-400 hover:text-white transition-colors mb-6 text-sm font-medium">
+            <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            Voltar para Links
+        </a>
+
+        <!-- Cabeçalho da Loja -->
+        <div class="flex flex-col items-center mb-8">
+            <div class="bg-white p-2 rounded-2xl mb-3 shadow-lg shadow-yellow-500/20">
+                <img src="img/logo_mercadolivre.png" alt="Logo Mercado Livre" class="w-16 h-16 object-contain">
+            </div>
+            <h1 class="text-xl font-bold text-white tracking-tight">Destaques Mercado Livre</h1>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- PRODUTO 1: Carregador Turbo -->
+        <!-- ========================================== -->
+        <div
+            class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
+            <div
+                class="bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
+                <div class="carousel-scroll flex overflow-x-auto snap-x snap-mandatory scrollbar-hide bg-white/5">
+                    <div class="w-full shrink-0 snap-center p-4 flex justify-center"><img src="img/ml_prod1_img1.jpg"
+                            class="h-44 w-auto object-contain rounded-lg drop-shadow-md" alt="Imagem 1"></div>
+                    <div class="w-full shrink-0 snap-center p-4 flex justify-center"><img src="img/ml_prod1_img2.jpg"
+                            class="h-44 w-auto object-contain rounded-lg drop-shadow-md" alt="Imagem 2"></div>
+                    <div class="w-full shrink-0 snap-center p-4 flex justify-center"><img src="img/ml_prod1_img3.jpg"
+                            class="h-44 w-auto object-contain rounded-lg drop-shadow-md" alt="Imagem 3"></div>
+                    <div class="w-full shrink-0 snap-center p-4 flex justify-center"><img src="img/ml_prod1_img4.jpg"
+                            class="h-44 w-auto object-contain rounded-lg drop-shadow-md" alt="Imagem 4"></div>
+                </div>
+                <div class="p-4 pt-3 text-center">
+                    <div class="flex justify-center gap-1 mb-3">
+                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500"></div>
+                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
+                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
+                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">🔋Carregador Turbo Xiaomi 100w
+                    </h3>
+                    <a href="https://meli.la/2KpgpUK" target="_blank"
+                        class="block w-full py-2.5 rounded-xl bg-[#ffe600] text-[#2d3277] font-bold text-sm shadow-lg shadow-yellow-500/20 active:scale-[0.98] transition-transform">
+                        🛒 Comprar no Mercado Livre
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== -->
+        <!-- PRODUTO 2: Câmera GoPro HERO13 -->
+        <!-- ========================================== -->
+        <div
+            class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
+            <div
+                class="bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
+                <div class="carousel-scroll flex overflow-x-auto snap-x snap-mandatory scrollbar-hide bg-white/5">
+                    <div class="w-full shrink-0 snap-center p-4 flex justify-center"><img src="img/ml_prod2_img1.png"
+                            class="h-44 w-auto object-contain rounded-lg drop-shadow-md" alt="Imagem 1"></div>
+                    <div class="w-full shrink-0 snap-center p-4 flex justify-center"><img src="img/ml_prod2_img2.png"
+                            class="h-44 w-auto object-contain rounded-lg drop-shadow-md" alt="Imagem 2"></div>
+                    <div class="w-full shrink-0 snap-center p-4 flex justify-center"><img src="img/ml_prod2_img3.png"
+                            class="h-44 w-auto object-contain rounded-lg drop-shadow-md" alt="Imagem 3"></div>
+                    <div class="w-full shrink-0 snap-center p-4 flex justify-center"><img src="img/ml_prod2_img4.png"
+                            class="h-44 w-auto object-contain rounded-lg drop-shadow-md" alt="Imagem 4"></div>
+                </div>
+                <div class="p-4 pt-3 text-center">
+                    <div class="flex justify-center gap-1 mb-3">
+                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500"></div>
+                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
+                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
+                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
+                    </div>
+                    <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">📷 Camera GoPro HERO13 Black</h3>
+                    <a href="https://meli.la/11aURRJ" target="_blank"
+                        class="block w-full py-2.5 rounded-xl bg-[#ffe600] text-[#2d3277] font-bold text-sm shadow-lg shadow-yellow-500/20 active:scale-[0.98] transition-transform">
+                        🛒 Comprar no Mercado Livre
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Aviso Flutuante (Centralizado Perfeitamente) -->
+    <div id="scrollMsg"
+        class="fixed bottom-6 left-0 right-0 flex justify-center w-full z-50 transition-opacity duration-300 pointer-events-none">
+        <div
+            class="bg-[#00bfa5]/90 backdrop-blur-md text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-[#00bfa5]/30 animate-bounce pointer-events-auto">
+            Deslize para ver mais 👇
+        </div>
+    </div>
+
+    <!-- Script de esconder o aviso de scroll -->
+    <script>
+        function verificarScroll() {
+            const scrollMsg = document.getElementById('scrollMsg');
+            if (!scrollMsg) return;
+            const posicaoAtual = window.innerHeight + window.scrollY;
+            const alturaTotal = document.body.offsetHeight;
+
+            if (window.innerHeight >= alturaTotal || posicaoAtual >= alturaTotal - 100) {
+                scrollMsg.style.opacity = '0';
+                scrollMsg.style.pointerEvents = 'none';
+            } else {
+                scrollMsg.style.opacity = '1';
+                scrollMsg.style.pointerEvents = 'auto';
+            }
+        }
+        window.addEventListener('load', verificarScroll);
+        window.addEventListener('scroll', verificarScroll);
+    </script>
+
+    <!-- Script para atualizar os pontinhos do Carrossel -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Seleciona todas as áreas de rolagem de imagem
+            const carousels = document.querySelectorAll('.carousel-scroll');
+
+            carousels.forEach(carousel => {
+                // Encontra os pontinhos correspondentes dentro do mesmo produto
+                const card = carousel.closest('.product-card');
+                const dots = card.querySelectorAll('.dot');
+
+                // Função que calcula e pinta o pontinho correto
+                const atualizarPontinhos = () => {
+                    const scrollPosition = carousel.scrollLeft;
+                    const itemWidth = carousel.clientWidth;
+                    
+                    // Evita erros se a largura for 0
+                    if (itemWidth === 0) return; 
+                    
+                    const currentIndex = Math.round(scrollPosition / itemWidth);
+
+                    dots.forEach((dot, index) => {
+                        if (index === currentIndex) {
+                            dot.classList.remove('bg-slate-600');
+                            dot.classList.add('bg-slate-300'); // Ativo (Claro)
+                        } else {
+                            dot.classList.remove('bg-slate-300');
+                            dot.classList.add('bg-slate-600'); // Inativo (Escuro)
+                        }
+                    });
+                };
+
+                // 1. Executa a função imediatamente ao carregar a página (Garante o 1º pontinho branco)
+                atualizarPontinhos();
+
+                // 2. Executa a função toda vez que rolar a imagem
+                carousel.addEventListener('scroll', atualizarPontinhos);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
