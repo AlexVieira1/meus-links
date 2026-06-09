@@ -16,7 +16,6 @@
 <body class="min-h-screen text-slate-200 flex flex-col items-center p-4 antialiased pb-20">
 
     <main class="w-full max-w-md flex flex-col mt-4 relative">
-        <!-- Botão Voltar (Como deve ficar) -->
         <a href="javascript:history.back()"
             class="inline-flex items-center text-slate-400 hover:text-white transition-colors mb-6 text-sm font-medium">
             <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -33,16 +32,16 @@
             <h1 class="text-xl font-bold text-white tracking-tight">Destaques Aliexpress</h1>
         </div>
 
-        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
-            data-images="img/al_prod4_img1.png,img/al_prod4_img2.png,img/al_prod4_img3.png,img/al_prod4_img4.png">
-            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
-                <button
-                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
-                <img src="img/al_prod4_img1.png" loading="lazy"
-                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
-                    alt="Produto">
-                <button
-                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
+            <div class="relative bg-white/5 h-52 flex items-center overflow-hidden">
+                <button class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-out" style="transform: translateX(0%);">
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod4_img1.png" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 1"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod4_img2.png" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 2"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod4_img3.png" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 3"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod4_img4.png" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 4"></div>
+                </div>
+                <button class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
             </div>
             <div class="p-4 pt-2 text-center">
                 <div class="dots-container flex justify-center gap-1.5 mb-3">
@@ -51,25 +50,23 @@
                     <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                     <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
-                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">📶 Intercomunicador Bluetooth EJEAS
-                    V6 PRO+</h3>
-                <a href="https://s.click.aliexpress.com/e/_c3GdbOxB" target="_blank"
-                    class="block w-full py-2.5 rounded-xl bg-[#ff4747] text-white font-bold text-sm shadow-lg shadow-red-500/20 active:scale-[0.98] transition-transform">
+                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">📶 Intercomunicador Bluetooth EJEAS V6 PRO+</h3>
+                <a href="https://s.click.aliexpress.com/e/_c3GdbOxB" target="_blank" class="block w-full py-2.5 rounded-xl bg-[#ff4747] text-white font-bold text-sm shadow-lg shadow-red-500/20 active:scale-[0.98] transition-transform">
                     🛒 Comprar no Aliexpress
                 </a>
             </div>
         </div>
 
-        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
-            data-images="img/al_prod5_img1.avif,img/al_prod5_img2.avif,img/al_prod5_img3.avif,img/al_prod5_img4.avif">
-            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
-                <button
-                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
-                <img src="img/al_prod5_img1.avif" loading="lazy"
-                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
-                    alt="Produto">
-                <button
-                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
+            <div class="relative bg-white/5 h-52 flex items-center overflow-hidden">
+                <button class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-out" style="transform: translateX(0%);">
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod5_img1.avif" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 1"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod5_img2.avif" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 2"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod5_img3.avif" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 3"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod5_img4.avif" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 4"></div>
+                </div>
+                <button class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
             </div>
             <div class="p-4 pt-2 text-center">
                 <div class="dots-container flex justify-center gap-1.5 mb-3">
@@ -78,25 +75,23 @@
                     <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                     <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
-                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">Tampa lateral à prova d'água TELESIN
-                </h3>
-                <a href="https://s.click.aliexpress.com/e/_c3BsiRXT" target="_blank"
-                    class="block w-full py-2.5 rounded-xl bg-[#ff4747] text-white font-bold text-sm shadow-lg shadow-red-500/20 active:scale-[0.98] transition-transform">
+                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">Tampa lateral à prova d'água TELESIN</h3>
+                <a href="https://s.click.aliexpress.com/e/_c3BsiRXT" target="_blank" class="block w-full py-2.5 rounded-xl bg-[#ff4747] text-white font-bold text-sm shadow-lg shadow-red-500/20 active:scale-[0.98] transition-transform">
                     🛒 Comprar no Aliexpress
                 </a>
             </div>
         </div>
 
-        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
-            data-images="img/ml_prod1_img1.jpg,img/ml_prod1_img2.jpg,img/ml_prod1_img3.jpg,img/ml_prod1_img4.jpg">
-            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
-                <button
-                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
-                <img src="img/ml_prod1_img1.jpg" loading="lazy"
-                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
-                    alt="Produto">
-                <button
-                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
+            <div class="relative bg-white/5 h-52 flex items-center overflow-hidden">
+                <button class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-out" style="transform: translateX(0%);">
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/ml_prod1_img1.jpg" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 1"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/ml_prod1_img2.jpg" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 2"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/ml_prod1_img3.jpg" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 3"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/ml_prod1_img4.jpg" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 4"></div>
+                </div>
+                <button class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
             </div>
             <div class="p-4 pt-2 text-center">
                 <div class="dots-container flex justify-center gap-1.5 mb-3">
@@ -106,23 +101,22 @@
                     <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
                 <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">🔋Carregador Turbo Xiaomi 100w</h3>
-                <a href="https://s.click.aliexpress.com/e/_c45AJ7hP" target="_blank"
-                    class="block w-full py-2.5 rounded-xl bg-[#ff4747] text-white font-bold text-sm shadow-lg shadow-red-500/20 active:scale-[0.98] transition-transform">
+                <a href="https://s.click.aliexpress.com/e/_c45AJ7hP" target="_blank" class="block w-full py-2.5 rounded-xl bg-[#ff4747] text-white font-bold text-sm shadow-lg shadow-red-500/20 active:scale-[0.98] transition-transform">
                     🛒 Comprar no Aliexpress
                 </a>
             </div>
         </div>
 
-        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
-            data-images="img/al_prod2_img1.avif,img/al_prod2_img2.avif,img/al_prod2_img3.avif,img/al_prod2_img4.avif">
-            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
-                <button
-                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
-                <img src="img/al_prod2_img1.avif" loading="lazy"
-                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
-                    alt="Produto">
-                <button
-                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
+            <div class="relative bg-white/5 h-52 flex items-center overflow-hidden">
+                <button class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-out" style="transform: translateX(0%);">
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod2_img1.avif" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 1"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod2_img2.avif" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 2"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod2_img3.avif" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 3"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod2_img4.avif" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 4"></div>
+                </div>
+                <button class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
             </div>
             <div class="p-4 pt-2 text-center">
                 <div class="dots-container flex justify-center gap-1.5 mb-3">
@@ -131,25 +125,23 @@
                     <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                     <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
-                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">📷 Conjunto de filtros ND TELESIN
-                </h3>
-                <a href="https://s.click.aliexpress.com/e/_c4OIwkp3" target="_blank"
-                    class="block w-full py-2.5 rounded-xl bg-[#ff4747] text-white font-bold text-sm shadow-lg shadow-red-500/20 active:scale-[0.98] transition-transform">
+                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">📷 Conjunto de filtros ND TELESIN</h3>
+                <a href="https://s.click.aliexpress.com/e/_c4OIwkp3" target="_blank" class="block w-full py-2.5 rounded-xl bg-[#ff4747] text-white font-bold text-sm shadow-lg shadow-red-500/20 active:scale-[0.98] transition-transform">
                     🛒 Comprar no Aliexpress
                 </a>
             </div>
         </div>
 
-        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
-            data-images="img/al_prod3_img1.avif,img/al_prod3_img2.avif,img/al_prod3_img3.avif,img/al_prod3_img4.avif">
-            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
-                <button
-                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
-                <img src="img/al_prod3_img1.avif" loading="lazy"
-                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
-                    alt="Produto">
-                <button
-                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
+            <div class="relative bg-white/5 h-52 flex items-center overflow-hidden">
+                <button class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <div class="carousel-track flex w-full h-full transition-transform duration-300 ease-out" style="transform: translateX(0%);">
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod3_img1.avif" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 1"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod3_img2.avif" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 2"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod3_img3.avif" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 3"></div>
+                    <div class="w-full h-full shrink-0 flex items-center justify-center p-4"><img src="img/al_prod3_img4.avif" loading="lazy" class="h-44 w-auto object-contain drop-shadow-md rounded-xl" alt="Imagem 4"></div>
+                </div>
+                <button class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
             </div>
             <div class="p-4 pt-2 text-center">
                 <div class="dots-container flex justify-center gap-1.5 mb-3">
@@ -158,10 +150,8 @@
                     <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                     <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
-                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">🎙️Adaptador de microfone de 3,5 mm
-                    para GoPro</h3>
-                <a href="https://s.click.aliexpress.com/e/_c3grnz9J" target="_blank"
-                    class="block w-full py-2.5 rounded-xl bg-[#ff4747] text-white font-bold text-sm shadow-lg shadow-red-500/20 active:scale-[0.98] transition-transform">
+                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">🎙️Adaptador de microfone de 3,5 mm para GoPro</h3>
+                <a href="https://s.click.aliexpress.com/e/_c3grnz9J" target="_blank" class="block w-full py-2.5 rounded-xl bg-[#ff4747] text-white font-bold text-sm shadow-lg shadow-red-500/20 active:scale-[0.98] transition-transform">
                     🛒 Comprar no Aliexpress
                 </a>
             </div>
@@ -169,11 +159,8 @@
 
     </main>
 
-    <div id="scrollMsg"
-        class="fixed bottom-6 left-0 right-0 flex justify-center w-full z-50 transition-opacity duration-300 pointer-events-none">
-        <div
-            class="bg-[#00bfa5]/90 backdrop-blur-md text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-[#00bfa5]/30 animate-bounce pointer-events-auto">
-            Deslize para ver mais 👇</div>
+    <div id="scrollMsg" class="fixed bottom-6 left-0 right-0 flex justify-center w-full z-50 transition-opacity duration-300 pointer-events-none">
+        <div class="bg-[#00bfa5]/90 backdrop-blur-md text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-[#00bfa5]/30 animate-bounce pointer-events-auto">Deslize para ver mais 👇</div>
     </div>
 
     <script>
@@ -192,35 +179,39 @@
         window.addEventListener('scroll', verificarScroll);
 
         document.addEventListener('DOMContentLoaded', () => {
-            document.querySelectorAll('.product-card').forEach(card => {
-                const imgElement = card.querySelector('.main-img');
+            const cards = document.querySelectorAll('.product-card');
+
+            cards.forEach(card => {
+                const track = card.querySelector('.carousel-track');
+                const slides = track.querySelectorAll('.shrink-0');
                 const prevBtn = card.querySelector('.prev-btn');
                 const nextBtn = card.querySelector('.next-btn');
                 const dots = card.querySelectorAll('.dots-container div');
-                const imagesAttr = card.getAttribute('data-images');
-                if (!imagesAttr) return;
 
-                const images = imagesAttr.split(',').map(url => url.trim());
                 let currentIndex = 0;
+                const totalSlides = slides.length;
 
-                const updateImage = () => {
-                    imgElement.style.opacity = '0.3';
-                    setTimeout(() => {
-                        imgElement.src = images[currentIndex];
-                        imgElement.style.opacity = '1';
-                    }, 150);
-                    dots.forEach((dot, idx) => {
-                        dot.classList.toggle('bg-slate-300', idx === currentIndex);
-                        dot.classList.toggle('bg-slate-600', idx !== currentIndex);
+                const updateCarousel = () => {
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    dots.forEach((dot, index) => {
+                        if (index === currentIndex) {
+                            dot.classList.remove('bg-slate-600');
+                            dot.classList.add('bg-slate-300'); 
+                        } else {
+                            dot.classList.remove('bg-slate-300');
+                            dot.classList.add('bg-slate-600'); 
+                        }
                     });
                 };
+
                 prevBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-                    updateImage();
+                    currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+                    updateCarousel();
                 });
+
                 nextBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-                    updateImage();
+                    currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+                    updateCarousel();
                 });
             });
         });
