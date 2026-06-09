@@ -348,43 +348,46 @@
         window.addEventListener('scroll', verificarScroll);
     </script>
 
-    <!-- Script para atualizar os pontinhos do Carrossel -->
+    <!-- Script Otimizado para os Pontinhos (Performance Mobile) -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Seleciona todas as áreas de rolagem de imagem
             const carousels = document.querySelectorAll('.carousel-scroll');
 
             carousels.forEach(carousel => {
-                // Encontra os pontinhos correspondentes dentro do mesmo produto
                 const card = carousel.closest('.product-card');
                 const dots = card.querySelectorAll('.dot');
+                // Pega os containers de cada imagem dentro deste carrossel
+                const items = carousel.querySelectorAll('.snap-center'); 
 
-                // Função que calcula e pinta o pontinho correto
-                const atualizarPontinhos = () => {
-                    const scrollPosition = carousel.scrollLeft;
-                    const itemWidth = carousel.clientWidth;
-                    
-                    // Evita erros se a largura for 0
-                    if (itemWidth === 0) return; 
-                    
-                    const currentIndex = Math.round(scrollPosition / itemWidth);
-
-                    dots.forEach((dot, index) => {
-                        if (index === currentIndex) {
-                            dot.classList.remove('bg-slate-600');
-                            dot.classList.add('bg-slate-300'); // Ativo (Claro)
-                        } else {
-                            dot.classList.remove('bg-slate-300');
-                            dot.classList.add('bg-slate-600'); // Inativo (Escuro)
-                        }
-                    });
+                // Configura o 'Observador' para avisar quando a imagem estiver 50% visível
+                const observerOptions = {
+                    root: carousel,
+                    threshold: 0.5 
                 };
 
-                // 1. Executa a função imediatamente ao carregar a página (Garante o 1º pontinho branco)
-                atualizarPontinhos();
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        // Se a imagem entrou no centro da tela...
+                        if (entry.isIntersecting) {
+                            // Descobre qual é a posição dela (0, 1, 2 ou 3)
+                            const index = Array.from(items).indexOf(entry.target);
 
-                // 2. Executa a função toda vez que rolar a imagem
-                carousel.addEventListener('scroll', atualizarPontinhos);
+                            // Atualiza as bolinhas apenas UMA vez por troca de foto
+                            dots.forEach((dot, i) => {
+                                if (i === index) {
+                                    dot.classList.remove('bg-slate-600');
+                                    dot.classList.add('bg-slate-300'); // Ativo
+                                } else {
+                                    dot.classList.remove('bg-slate-300');
+                                    dot.classList.add('bg-slate-600'); // Inativo
+                                }
+                            });
+                        }
+                    });
+                }, observerOptions);
+
+                // Manda o observador vigiar cada imagem do carrossel
+                items.forEach(item => observer.observe(item));
             });
         });
     </script>
