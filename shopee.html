@@ -5,32 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo Shopee | Alex Vieira</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-        }
-
-        /* Esconde a barra de rolagem no carrossel de arrastar, mas mantém a funcionalidade */
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
         }
     </style>
 </head>
 
 <body class="min-h-screen text-slate-200 flex flex-col items-center p-4 antialiased pb-20">
 
-    <!-- Container Principal (mesma largura da tela inicial) -->
     <main class="w-full max-w-md flex flex-col mt-4 relative">
-
-        <!-- Botão Voltar -->
-        <a href="index.html"
+        <!-- Botão Voltar (Como deve ficar) -->
+        <a href="javascript:history.back()"
             class="inline-flex items-center text-slate-400 hover:text-white transition-colors mb-6 text-sm font-medium">
             <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +26,6 @@
             Voltar para Links
         </a>
 
-        <!-- Cabeçalho da Loja -->
         <div class="flex flex-col items-center mb-8">
             <div class="bg-white p-2 rounded-2xl mb-3 shadow-lg shadow-orange-500/20">
                 <img src="img/logo_shopee.png" alt="Logo Shopee" class="w-16 h-16 object-contain">
@@ -47,378 +33,275 @@
             <h1 class="text-xl font-bold text-white tracking-tight">Destaques Shopee</h1>
         </div>
 
-        <!-- ========================================== -->
-        <!-- PRODUTO 1: Intercomunicador -->
-        <!-- ========================================== -->
-        <div
-            class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-            <div
-                class="bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-                <div class="carousel-scroll flex overflow-x-auto snap-x snap-mandatory scrollbar-hide bg-white/5">
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod3_img1.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 1"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod3_img2.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 2"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod3_img3.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 3"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod3_img4.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 4"></div>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
+            data-images="img/prod3_img1.png,img/prod3_img2.png,img/prod3_img3.png,img/prod3_img4.png">
+            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
+                <button
+                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <img src="img/prod3_img1.png" loading="lazy"
+                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
+                    alt="Produto">
+                <button
+                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+            </div>
+            <div class="p-4 pt-2 text-center">
+                <div class="dots-container flex justify-center gap-1.5 mb-3">
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
-                <div class="p-4 pt-3 text-center">
-                    <div class="flex justify-center gap-1 mb-3">
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                    </div>
-                    <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">📶 Intercomunicador V6 Plus</h3>
-                    <a href="https://s.shopee.com.br/8KmtiDjfNh" target="_blank"
-                        class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
-                        🛒 Comprar na Shopee
-                    </a>
-                </div>
+                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">📶 Intercomunicador V6 Plus</h3>
+                <a href="https://s.shopee.com.br/8KmtiDjfNh" target="_blank"
+                    class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
+                    🛒 Comprar na Shopee
+                </a>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- PRODUTO 2: Suporte Magnético -->
-        <!-- ========================================== -->
-        <div
-            class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-            <div
-                class="bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-                <div class="carousel-scroll flex overflow-x-auto snap-x snap-mandatory scrollbar-hide bg-white/5">
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod1_img1.jpg" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 1"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod1_img2.jpg" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 2"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod1_img3.jpg" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 3"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod1_img4.jpg" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 4"></div>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
+            data-images="img/prod1_img1.jpg,img/prod1_img2.jpg,img/prod1_img3.jpg,img/prod1_img4.jpg">
+            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
+                <button
+                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <img src="img/prod1_img1.jpg" loading="lazy"
+                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
+                    alt="Produto">
+                <button
+                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+            </div>
+            <div class="p-4 pt-2 text-center">
+                <div class="dots-container flex justify-center gap-1.5 mb-3">
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
-                <div class="p-4 pt-3 text-center">
-                    <div class="flex justify-center gap-1 mb-3">
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                    </div>
-                    <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">📱 Suporte Magnético de Celular
-                    </h3>
-                    <a href="https://s.shopee.com.br/3qKUIiGc7t" target="_blank"
-                        class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
-                        🛒 Comprar na Shopee
-                    </a>
-                </div>
+                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">📱 Suporte Magnético de Celular</h3>
+                <a href="https://s.shopee.com.br/3qKUIiGc7t" target="_blank"
+                    class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
+                    🛒 Comprar na Shopee
+                </a>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- PRODUTO 3: GoPro HERO13 -->
-        <!-- ========================================== -->
-        <div
-            class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-            <div
-                class="bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-                <div class="carousel-scroll flex overflow-x-auto snap-x snap-mandatory scrollbar-hide bg-white/5">
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod2_img1.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 1"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod2_img2.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 2"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod2_img3.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 3"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod2_img4.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 4"></div>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
+            data-images="img/prod2_img1.png,img/prod2_img2.png,img/prod2_img3.png,img/prod2_img4.png">
+            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
+                <button
+                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <img src="img/prod2_img1.png" loading="lazy"
+                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
+                    alt="Produto">
+                <button
+                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+            </div>
+            <div class="p-4 pt-2 text-center">
+                <div class="dots-container flex justify-center gap-1.5 mb-3">
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
-                <div class="p-4 pt-3 text-center">
-                    <div class="flex justify-center gap-1 mb-3">
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                    </div>
-                    <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">📷 Camera GoPro HERO13 Black</h3>
-                    <a href="https://s.shopee.com.br/9KfQtRdxEe" target="_blank"
-                        class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
-                        🛒 Comprar na Shopee
-                    </a>
-                </div>
+                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">📷 Camera GoPro HERO13 Black</h3>
+                <a href="https://s.shopee.com.br/9KfQtRdxEe" target="_blank"
+                    class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
+                    🛒 Comprar na Shopee
+                </a>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- PRODUTO 4: Adaptador Mic GoPro -->
-        <!-- ========================================== -->
-        <div
-            class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-            <div
-                class="bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-                <div class="carousel-scroll flex overflow-x-auto snap-x snap-mandatory scrollbar-hide bg-white/5">
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod7_img1.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 1"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod7_img2.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 2"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod7_img3.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 3"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod7_img4.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 4"></div>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
+            data-images="img/prod7_img1.png,img/prod7_img2.png,img/prod7_img3.png,img/prod7_img4.png">
+            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
+                <button
+                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <img src="img/prod7_img1.png" loading="lazy"
+                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
+                    alt="Produto">
+                <button
+                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+            </div>
+            <div class="p-4 pt-2 text-center">
+                <div class="dots-container flex justify-center gap-1.5 mb-3">
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
-                <div class="p-4 pt-3 text-center">
-                    <div class="flex justify-center gap-1 mb-3">
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                    </div>
-                    <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">🎙️Adaptador de microfone de 3,5
-                        mm
-                        para GoPro</h3>
-                    <a href="https://s.shopee.com.br/9UyvV1Dq0j" target="_blank"
-                        class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
-                        🛒 Comprar na Shopee
-                    </a>
-                </div>
+                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">🎙️Adaptador de microfone de 3,5 mm
+                    para GoPro</h3>
+                <a href="https://s.shopee.com.br/9UyvV1Dq0j" target="_blank"
+                    class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
+                    🛒 Comprar na Shopee
+                </a>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- PRODUTO 5: Microfone Duplo -->
-        <!-- ========================================== -->
-        <div
-            class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-            <div
-                class="bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-                <div class="carousel-scroll flex overflow-x-auto snap-x snap-mandatory scrollbar-hide bg-white/5">
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod4_img1.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 1"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod4_img2.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 2"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod4_img3.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 3"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod4_img4.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 4"></div>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
+            data-images="img/prod4_img1.png,img/prod4_img2.png,img/prod4_img3.png,img/prod4_img4.png">
+            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
+                <button
+                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <img src="img/prod4_img1.png" loading="lazy"
+                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
+                    alt="Produto">
+                <button
+                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+            </div>
+            <div class="p-4 pt-2 text-center">
+                <div class="dots-container flex justify-center gap-1.5 mb-3">
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
-                <div class="p-4 pt-3 text-center">
-                    <div class="flex justify-center gap-1 mb-3">
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                    </div>
-                    <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">🎙️Microfone duplo</h3>
-                    <a href="https://s.shopee.com.br/8pjAJmSDw0" target="_blank"
-                        class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
-                        🛒 Comprar na Shopee
-                    </a>
-                </div>
+                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">🎙️Microfone duplo</h3>
+                <a href="https://s.shopee.com.br/8pjAJmSDw0" target="_blank"
+                    class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
+                    🛒 Comprar na Shopee
+                </a>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- PRODUTO 6: Carregador Moto -->
-        <!-- ========================================== -->
-        <div
-            class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-            <div
-                class="bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-                <div class="carousel-scroll flex overflow-x-auto snap-x snap-mandatory scrollbar-hide bg-white/5">
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod5_img1.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 1"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod5_img2.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 2"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod5_img3.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 3"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod5_img4.png" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 4"></div>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
+            data-images="img/prod5_img1.png,img/prod5_img2.png,img/prod5_img3.png,img/prod5_img4.png">
+            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
+                <button
+                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <img src="img/prod5_img1.png" loading="lazy"
+                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
+                    alt="Produto">
+                <button
+                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+            </div>
+            <div class="p-4 pt-2 text-center">
+                <div class="dots-container flex justify-center gap-1.5 mb-3">
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
-                <div class="p-4 pt-3 text-center">
-                    <div class="flex justify-center gap-1 mb-3">
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                    </div>
-                    <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">🔋Carregador Usb Turbo de Celular
-                        Para Motos</h3>
-                    <a href="https://s.shopee.com.br/2g8XgFwlpt" target="_blank"
-                        class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
-                        🛒 Comprar na Shopee
-                    </a>
-                </div>
+                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">🔋Carregador Usb Turbo de Celular
+                    Para Motos</h3>
+                <a href="https://s.shopee.com.br/2g8XgFwlpt" target="_blank"
+                    class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
+                    🛒 Comprar na Shopee
+                </a>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- PRODUTO 7: Capa Bag -->
-        <!-- ========================================== -->
-        <div
-            class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-            <div
-                class="bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-                <div class="carousel-scroll flex overflow-x-auto snap-x snap-mandatory scrollbar-hide bg-white/5">
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod7_img1.jpg" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 1"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod7_img2.jpg" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 2"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod7_img3.jpg" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 3"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img
-                            src="img/prod7_img4.jpg" class="h-44 w-auto object-contain rounded-lg drop-shadow-md"
-                            alt="Imagem 4"></div>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
+            data-images="img/prod7_img1.jpg,img/prod7_img2.jpg,img/prod7_img3.jpg,img/prod7_img4.jpg">
+            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
+                <button
+                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <img src="img/prod7_img1.jpg" loading="lazy"
+                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
+                    alt="Produto">
+                <button
+                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+            </div>
+            <div class="p-4 pt-2 text-center">
+                <div class="dots-container flex justify-center gap-1.5 mb-3">
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
-                <div class="p-4 pt-3 text-center">
-                    <div class="flex justify-center gap-1 mb-3">
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                    </div>
-                    <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">Capa bag 45L</h3>
-                    <a href="https://s.shopee.com.br/7VDoC7BW5p" target="_blank"
-                        class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
-                        🛒 Comprar na Shopee
-                    </a>
-                </div>
+                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">Capa bag 45L</h3>
+                <a href="https://s.shopee.com.br/7VDoC7BW5p" target="_blank"
+                    class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
+                    🛒 Comprar na Shopee
+                </a>
             </div>
         </div>
 
-        <!-- ========================================== -->
-        <!-- PRODUTO 8: Bagageiro CG Titan -->
-        <!-- ========================================== -->
-        <div
-            class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-            <div class="bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg">
-                <div class="carousel-scroll flex overflow-x-auto snap-x snap-mandatory scrollbar-hide bg-white/5">
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img src="img/prod6_img1.png"
-                            class="h-44 w-auto object-contain rounded-lg drop-shadow-md" alt="Imagem 1"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img src="img/prod6_img2.png"
-                            class="h-44 w-auto object-contain rounded-lg drop-shadow-md" alt="Imagem 2"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img src="img/prod6_img3.png"
-                            class="h-44 w-auto object-contain rounded-lg drop-shadow-md" alt="Imagem 3"></div>
-                    <div class="w-full shrink-0 snap-center snap-always p-4 flex justify-center"><img src="img/prod6_img4.png"
-                            class="h-44 w-auto object-contain rounded-lg drop-shadow-md" alt="Imagem 4"></div>
+        <div class="product-card bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden mb-5 backdrop-blur-md shadow-lg"
+            data-images="img/prod6_img1.png,img/prod6_img2.png,img/prod6_img3.png,img/prod6_img4.png">
+            <div class="relative bg-white/5 h-52 flex items-center justify-center p-4">
+                <button
+                    class="prev-btn absolute left-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❮</button>
+                <img src="img/prod6_img1.png" loading="lazy"
+                    class="main-img h-44 w-auto object-contain drop-shadow-md transition-opacity duration-200"
+                    alt="Produto">
+                <button
+                    class="next-btn absolute right-3 w-8 h-8 bg-slate-900/60 text-white rounded-full flex items-center justify-center backdrop-blur-sm z-10 shadow active:scale-90 transition-transform">❯</button>
+            </div>
+            <div class="p-4 pt-2 text-center">
+                <div class="dots-container flex justify-center gap-1.5 mb-3">
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-300 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-slate-600 transition-colors duration-300"></div>
                 </div>
-                <div class="p-4 pt-3 text-center">
-                    <div class="flex justify-center gap-1 mb-3">
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                        <div class="dot w-1.5 h-1.5 rounded-full bg-slate-500/50"></div>
-                    </div>
-                    <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">Bagageiro CG Titan 160 2015 a
-                        2024
-                    </h3>
-                    <a href="https://s.shopee.com.br/8pjBkYZPt1" target="_blank"
-                        class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
-                        🛒 Comprar na Shopee
-                    </a>
-                </div>
+                <h3 class="text-sm font-semibold text-slate-100 mb-4 line-clamp-2">Bagageiro CG Titan 160 2015 a 2024
+                </h3>
+                <a href="https://s.shopee.com.br/8pjBkYZPt1" target="_blank"
+                    class="block w-full py-2.5 rounded-xl bg-[#ee4d2d] text-white font-bold text-sm shadow-lg shadow-orange-500/20 active:scale-[0.98] transition-transform">
+                    🛒 Comprar na Shopee
+                </a>
             </div>
         </div>
 
     </main>
 
-    <!-- Aviso Flutuante -->
     <div id="scrollMsg"
         class="fixed bottom-6 left-0 right-0 flex justify-center w-full z-50 transition-opacity duration-300 pointer-events-none">
         <div
             class="bg-[#00bfa5]/90 backdrop-blur-md text-white px-5 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-[#00bfa5]/30 animate-bounce pointer-events-auto">
-            Deslize para ver mais 👇
-        </div>
+            Deslize para ver mais 👇</div>
     </div>
 
-    <!-- Script de esconder o aviso de scroll -->
     <script>
         function verificarScroll() {
             const scrollMsg = document.getElementById('scrollMsg');
             if (!scrollMsg) return;
             const posicaoAtual = window.innerHeight + window.scrollY;
             const alturaTotal = document.body.offsetHeight;
-
             if (window.innerHeight >= alturaTotal || posicaoAtual >= alturaTotal - 100) {
-                scrollMsg.style.opacity = '0';
-                scrollMsg.style.pointerEvents = 'none';
+                scrollMsg.style.opacity = '0'; scrollMsg.style.pointerEvents = 'none';
             } else {
-                scrollMsg.style.opacity = '1';
-                scrollMsg.style.pointerEvents = 'auto';
+                scrollMsg.style.opacity = '1'; scrollMsg.style.pointerEvents = 'auto';
             }
         }
         window.addEventListener('load', verificarScroll);
         window.addEventListener('scroll', verificarScroll);
-    </script>
 
-    <!-- Script Otimizado para os Pontinhos (Performance Mobile) -->
-    <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const carousels = document.querySelectorAll('.carousel-scroll');
+            document.querySelectorAll('.product-card').forEach(card => {
+                const imgElement = card.querySelector('.main-img');
+                const prevBtn = card.querySelector('.prev-btn');
+                const nextBtn = card.querySelector('.next-btn');
+                const dots = card.querySelectorAll('.dots-container div');
+                const imagesAttr = card.getAttribute('data-images');
+                if (!imagesAttr) return;
 
-            carousels.forEach(carousel => {
-                const card = carousel.closest('.product-card');
-                const dots = card.querySelectorAll('.dot');
-                // Pega os containers de cada imagem dentro deste carrossel
-                const items = carousel.querySelectorAll('.snap-center');
+                const images = imagesAttr.split(',').map(url => url.trim());
+                let currentIndex = 0;
 
-                // Configura o 'Observador' para avisar quando a imagem estiver 50% visível
-                const observerOptions = {
-                    root: carousel,
-                    threshold: 0.5
-                };
-
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        // Se a imagem entrou no centro da tela...
-                        if (entry.isIntersecting) {
-                            // Descobre qual é a posição dela (0, 1, 2 ou 3)
-                            const index = Array.from(items).indexOf(entry.target);
-
-                            // Atualiza as bolinhas apenas UMA vez por troca de foto
-                            dots.forEach((dot, i) => {
-                                if (i === index) {
-                                    dot.classList.remove('bg-slate-600');
-                                    dot.classList.add('bg-slate-300'); // Ativo
-                                } else {
-                                    dot.classList.remove('bg-slate-300');
-                                    dot.classList.add('bg-slate-600'); // Inativo
-                                }
-                            });
-                        }
+                const updateImage = () => {
+                    imgElement.style.opacity = '0.3';
+                    setTimeout(() => {
+                        imgElement.src = images[currentIndex];
+                        imgElement.style.opacity = '1';
+                    }, 150);
+                    dots.forEach((dot, idx) => {
+                        dot.classList.toggle('bg-slate-300', idx === currentIndex);
+                        dot.classList.toggle('bg-slate-600', idx !== currentIndex);
                     });
-                }, observerOptions);
-
-                // Manda o observador vigiar cada imagem do carrossel
-                items.forEach(item => observer.observe(item));
+                };
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+                    updateImage();
+                });
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+                    updateImage();
+                });
             });
         });
     </script>
-
 </body>
 
 </html>
